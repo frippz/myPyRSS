@@ -9,7 +9,7 @@ def main():
 
         soup = BeautifulSoup(entry.description, "html.parser")
         asText = soup.get_text()
-        summary = asText[:120]
+        summary = asText[:200]
 
         print('-')
         print('Title: ',entry.title)
