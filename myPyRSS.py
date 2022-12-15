@@ -7,7 +7,7 @@ def main():
 
     for entry in feed.entries[:2]:
 
-        soup = BeautifulSoup(entry.description)
+        soup = BeautifulSoup(entry.description, "html.parser")
         asText = soup.get_text()
         summary = asText[:120]
 
